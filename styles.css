@@ -1,0 +1,79 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor del buscador */
+.search-container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Título */
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Caja de búsqueda con icono de lupa */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 30px;
+  padding-right: 35px; /* Espacio para el icono */
+}
+
+.search-box .search-icon {
+  font-size: 18px;
+  color: #888;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* Lista de sugerencias */
+#resultados {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 400px;
+  margin: auto;
+}
+
+#resultados li {
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#resultados li:hover {
+  background: #f0f0f0;
+}
