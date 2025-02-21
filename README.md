@@ -65,3 +65,58 @@ Este proyecto implementa un **motor de búsqueda con sugerencias predictivas** a
 - Permitir sugerencias personalizadas basadas en historial de búsqueda.
 - Optimizar consultas SQL para mayor eficiencia.
 
+
+# Análisis de `neuronal.php`
+
+El archivo `neuronal.php` implementa un sistema de **texto predictivo neuronal** basado en una interfaz web interactiva. Su funcionamiento se divide en varias partes:
+
+## 1. Estructura General
+- Es una página web con **HTML, CSS y JavaScript**.
+- Contiene un **cuadro de texto** donde el usuario escribe.
+- Muestra **sugerencias de palabras** basadas en el texto ingresado.
+- Representa visualmente **neuronas activadas** según las letras escritas.
+
+## 2. Interfaz Visual
+- Usa **CSS** para diseñar una interfaz oscura con texto en blanco.
+- Las **neuronas** (representadas como círculos) cambian de color cuando el usuario escribe.
+- Al escribir, se activa la función de predicción, mostrando palabras sugeridas en una lista.
+
+## 3. Funcionamiento del Sistema de Predicción
+Cada vez que el usuario **escribe una palabra**, el sistema:
+1. Toma las **dos últimas palabras** escritas.
+2. Envía una **petición a un archivo externo (`predictivo2.php`)** para obtener predicciones.
+3. **Recibe las palabras sugeridas** desde el backend.
+4. Muestra las palabras en una lista para que el usuario pueda seleccionarlas.
+
+## 4. Activación de Neuronas
+- Cada letra escrita **activa una "neurona" virtual** en pantalla.
+- Las neuronas son pequeños **círculos** que cambian de color cuando su letra correspondiente es usada.
+- Esto **simula una red neuronal activándose en tiempo real**.
+
+## 5. Conexión con `predictivo2.php`
+- El archivo no incluye la **lógica de predicción** dentro de `neuronal.php`, sino que **depende de `predictivo2.php`**.
+- `predictivo2.php` recibe la entrada del usuario y devuelve las palabras más probables para completar la frase.
+
+---
+
+## ¿Cómo funciona en términos prácticos?
+1. El usuario **escribe en el cuadro de texto**.
+2. El sistema toma las **últimas dos palabras** escritas.
+3. Se hace una **petición a `predictivo2.php`** para obtener palabras sugeridas.
+4. Si hay predicciones, aparecen en una lista debajo del cuadro de texto.
+5. Al hacer clic en una sugerencia, se añade al texto automáticamente.
+6. Se **actualizan las "neuronas activas"** visualmente con las letras ingresadas.
+
+---
+
+## ¿Falta algo importante?
+- No se puede analizar `predictivo2.php`, que es la parte que realmente **hace la predicción**.
+- Si `predictivo2.php` usa una **red neuronal real**, sería importante revisar cómo procesa los datos.
+
+---
+
+## Conclusión
+ **Este archivo es solo la interfaz visual** y la lógica de interacción. La verdadera inteligencia del sistema depende de `predictivo2.php`, que maneja la predicción del texto basado en modelos estadísticos o redes neuronales.
+
+Si quieres que analice `predictivo2.php`, súbelo y lo reviso. 
+
